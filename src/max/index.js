@@ -7,7 +7,11 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
-  /* your logic here...*/
+  let max = arr.reduce((a, b) => {
+    return Math.max(a, b);
+  });
+
+  return max;
 };
 
 export default max;
