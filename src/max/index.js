@@ -7,11 +7,12 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
-  let max = arr.reduce((a, b) => {
+  return arr.reduce((a, b) => {
+    if (b === Infinity || isNaN(b)) {
+      b = 0;
+    }
     return Math.max(a, b);
-  });
-
-  return max;
+  }, 0);
 };
 
 export default max;

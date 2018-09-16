@@ -11,7 +11,15 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-  /* your logic here...*/
+  return arr.reduce((prev, next) => {
+    next = parseInt(next);
+
+    if (next === Infinity || isNaN(next)) {
+      next = 0;
+    }
+
+    return prev + next;
+  }, 0);
 };
 
 export default sumElements;

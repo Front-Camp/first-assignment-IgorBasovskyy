@@ -10,7 +10,12 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  return a + b;
+  if (x === Infinity || isNaN(x)) {
+    x = 0;
+  } else if (y === Infinity || isNaN(y)) {
+    y = 0;
+  }
+  return +x + +y;
 };
 
 export default sum;
